@@ -1,10 +1,11 @@
-import { InputPropertyComponent } from './input-property/input-property.component';
-import { MeuFormComponent } from './meu-form/meu-form.component';
 import { TestBed, async } from '@angular/core/testing';
 
+import { InputPropertyComponent } from './input-property/input-property.component';
+import { MeuFormComponent } from './meu-form/meu-form.component';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 describe('AppComponent', () => {
   beforeEach(
@@ -14,7 +15,8 @@ describe('AppComponent', () => {
           AppComponent,
           DataBindingComponent,
           MeuFormComponent,
-          InputPropertyComponent
+          InputPropertyComponent,
+          OutputPropertyComponent
         ],
         imports: [FormsModule]
       }).compileComponents();

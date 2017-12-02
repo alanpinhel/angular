@@ -1,9 +1,10 @@
-import { InputPropertyComponent } from '../input-property/input-property.component';
-import { MeuFormComponent } from '../meu-form/meu-form.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MeuFormComponent } from '../meu-form/meu-form.component';
+import { InputPropertyComponent } from '../input-property/input-property.component';
 import { DataBindingComponent } from './data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { OutputPropertyComponent } from '../output-property/output-property.component';
 
 describe('DataBindingComponent', () => {
   let component: DataBindingComponent;
@@ -15,7 +16,8 @@ describe('DataBindingComponent', () => {
         declarations: [
           DataBindingComponent,
           MeuFormComponent,
-          InputPropertyComponent
+          InputPropertyComponent,
+          OutputPropertyComponent
         ],
         imports: [FormsModule]
       }).compileComponents();
