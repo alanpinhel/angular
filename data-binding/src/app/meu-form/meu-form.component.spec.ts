@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MeuFormComponent } from './meu-form.component';
@@ -6,12 +7,14 @@ describe('MeuFormComponent', () => {
   let component: MeuFormComponent;
   let fixture: ComponentFixture<MeuFormComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ MeuFormComponent ]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [MeuFormComponent],
+        imports: [FormsModule]
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MeuFormComponent);
