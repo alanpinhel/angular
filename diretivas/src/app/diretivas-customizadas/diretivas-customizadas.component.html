@@ -20,3 +20,18 @@
 <div *ngElse="mostrarCursos">
   Não existem cursos para serem listados.
 </div>
+
+<br>
+
+<button (click)="onMostrarCursos()">
+  Mostrar ou esconder cursos
+</button>
+
+<br>
+
+<!-- Para Angular v4+, usar <ng-template></ng-template> no lugar de <template></template> -->
+<ng-template [ngElse]="mostrarCursos">
+  <div>
+    Não existem cursos para serem listados.
+  </div>
+</ng-template>
