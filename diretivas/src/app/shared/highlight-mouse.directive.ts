@@ -5,6 +5,8 @@ import { Directive, HostListener, ElementRef, Renderer, HostBinding } from '@ang
 })
 export class HighlightMouseDirective {
 
+  private backgroundColor: string;
+
   @HostListener('mouseenter') onMouseOver() {
     /*this._renderer.setElementStyle(
       this._elementRef.nativeElement,
@@ -28,8 +30,6 @@ export class HighlightMouseDirective {
     // código extra
     return this.backgroundColor;
   }
-
-  private backgroundColor: string;
 
   constructor(
     // private _elementRef: ElementRef,

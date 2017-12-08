@@ -6,15 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diretiva-ngif.component.scss']
 })
 export class DiretivaNgifComponent implements OnInit {
-  cursos: string[] = ["Angular 2"];
-  
-  mostrarCursos: boolean = false;
 
-  constructor() {}
+  cursos = ['Angular 2'];
 
-  ngOnInit() {}
+  mostrarCursos = false;
+
+  constructor() { }
+
+  ngOnInit() { }
 
   onMostrarCursos() {
     this.mostrarCursos = !this.mostrarCursos;
   }
+
 }
