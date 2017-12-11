@@ -12,19 +12,21 @@ import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.comp
 import { CursoNaoEcontradoComponent } from './cursos/curso-nao-econtrado/curso-nao-econtrado.component';
 import { CursosService } from './cursos/cursos.service';
 import { AppRountingModule } from './app.routing.module';
+import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
+    LoginComponent/*,
     CursosComponent,
     CursoDetalheComponent,
-    CursoNaoEcontradoComponent
+    CursoNaoEcontradoComponent*/
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
+    CursosModule,
     AppRountingModule
     //routing
   ],
