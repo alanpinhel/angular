@@ -5,11 +5,13 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
+import { CursoNaoEcontradoComponent } from './cursos/curso-nao-econtrado/curso-nao-econtrado.component';
 
 const APP_ROUTES: Routes = [
   { path: 'cursos', component: CursosComponent },
   { path: 'curso/:id', component: CursoDetalheComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'naoEncontrado', component: CursoNaoEcontradoComponent },
   { path: '', component: HomeComponent }
 ];
 
