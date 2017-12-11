@@ -11,6 +11,7 @@ import { routing } from './app.routing';
 import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 import { CursoNaoEcontradoComponent } from './cursos/curso-nao-econtrado/curso-nao-econtrado.component';
 import { CursosService } from './cursos/cursos.service';
+import { AppRountingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CursosService } from './cursos/cursos.service';
   imports: [
     BrowserModule,
     MaterializeModule,
-    routing
+    AppRountingModule
+    //routing
   ],
   providers: [CursosService],
   bootstrap: [AppComponent]
