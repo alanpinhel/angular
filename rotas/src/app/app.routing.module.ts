@@ -8,10 +8,10 @@ import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.comp
 import { CursoNaoEcontradoComponent } from './cursos/curso-nao-econtrado/curso-nao-econtrado.component';
 
 const appRoutes: Routes = [
-  { path: 'cursos', component: CursosComponent },
-  { path: 'curso/:id', component: CursoDetalheComponent },
+  // { path: 'cursos', component: CursosComponent },
+  // { path: 'curso/:id', component: CursoDetalheComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'naoEncontrado', component: CursoNaoEcontradoComponent },
+  // { path: 'naoEncontrado', component: CursoNaoEcontradoComponent },
   { path: '', component: HomeComponent }
 ];
 
