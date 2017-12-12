@@ -13,6 +13,7 @@ import { CursoNaoEcontradoComponent } from './cursos/curso-nao-econtrado/curso-n
 import { CursosService } from './cursos/cursos.service';
 import { AppRountingModule } from './app.routing.module';
 import { CursosModule } from './cursos/cursos.module';
+import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CursosModule } from './cursos/cursos.module';
     BrowserModule,
     MaterializeModule,
     CursosModule,
+    AlunosModule,
     AppRountingModule
     //routing
   ],
