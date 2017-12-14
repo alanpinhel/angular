@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { MaterializeModule } from 'angular2-materialize';
 
@@ -12,6 +13,7 @@ import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.comp
 import { CursoNaoEcontradoComponent } from './cursos/curso-nao-econtrado/curso-nao-econtrado.component';
 import { CursosService } from './cursos/cursos.service';
 import { AppRountingModule } from './app.routing.module';
+import { AuthService } from './login/auth.service';
 // import { CursosModule } from './cursos/cursos.module';
 // import { AlunosModule } from './alunos/alunos.module';
 
@@ -26,13 +28,14 @@ import { AppRountingModule } from './app.routing.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     MaterializeModule,
     // CursosModule,
     // AlunosModule,
     AppRountingModule
     // routing
   ],
-  providers: [CursosService],
+  providers: [CursosService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
