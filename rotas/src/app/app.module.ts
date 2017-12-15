@@ -15,6 +15,8 @@ import { CursosService } from './cursos/cursos.service';
 import { AppRountingModule } from './app.routing.module';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guard';
+import { CursosGuard } from './guards/cursos.guard';
+import { AlunosGuard } from './guards/alunos.guard';
 // import { CursosModule } from './cursos/cursos.module';
 // import { AlunosModule } from './alunos/alunos.module';
 
@@ -36,7 +38,7 @@ import { AuthGuard } from './guards/auth.guard';
     AppRountingModule
     // routing
   ],
-  providers: [CursosService, AuthService, AuthGuard],
+  providers: [CursosService, AuthService, AuthGuard, CursosGuard, AlunosGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
