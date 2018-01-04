@@ -20,4 +20,4 @@ import { CursosRountingModule } from './cursos.routing.module';
     CursoNaoEcontradoComponent
   ]
 })
-export class CursosModule {}
+export class CursosModule { }

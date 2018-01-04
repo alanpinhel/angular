@@ -19,7 +19,7 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
-    private _alunosService: AlunosService
+    // private _alunosService: AlunosService
   ) { }
 
   ngOnInit() {
