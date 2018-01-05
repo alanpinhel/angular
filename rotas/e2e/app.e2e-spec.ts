@@ -7,8 +7,11 @@ describe('rotas App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('deve fazer login', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    page.getInputUsuario().sendKeys('usuario@email.com');
+    page.getInputSenha().sendKeys('123456');
+    page.getButtonLogin().click();
+    expect(page.getBrandLogoText()).toBe('Rotas Ng2');
   });
 });

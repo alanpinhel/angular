@@ -17,6 +17,13 @@
           "request": "launch",
           "url": "http://localhost:9876/debug.html",
           "webRoot": "${workspaceRoot}"
+        },
+        {
+          "name": "ng e2e",
+          "type": "chrome",
+          "request": "launch",
+          "url": "http://localhost:49152",
+          "webRoot": "${workspaceRoot}"
         }
     ]
 }
