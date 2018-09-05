@@ -2,7 +2,7 @@ import {
   Directive,
   ElementRef,
   HostListener,
-  Renderer,
+  Renderer2,
   Input
 } from '@angular/core';
 
@@ -13,11 +13,11 @@ export class DarkOnHoverDirective {
   @Input()
   brightness = '70%';
 
-  constructor(private el: ElementRef, private render: Renderer) {}
+  constructor(private el: ElementRef, private render: Renderer2) {}
 
   @HostListener('mouseover')
   darkenOn() {
-    this.render.setElementStyle(
+    this.render.setStyle(
       this.el.nativeElement,
       'filter',
       `brightness(${this.brightness})`
@@ -26,10 +26,6 @@ export class DarkOnHoverDirective {
 
   @HostListener('mouseleave')
   darkenOff() {
-    this.render.setElementStyle(
-      this.el.nativeElement,
-      'filter',
-      'brightness(100%)'
-    );
+    this.render.setStyle(this.el.nativeElement, 'filter', 'brightness(100%)');
   }
 }
