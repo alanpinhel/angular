@@ -9,6 +9,7 @@ import { PhotoModule } from '../photo/photo.module';
 import { CardModule } from './../../shared/components/card/card.module';
 import { SearchComponent } from './search/search.component';
 import { DarkOnHoverModule } from './../../shared/directives/dark-on-hover/dark-on-hover.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,12 @@ import { DarkOnHoverModule } from './../../shared/directives/dark-on-hover/dark-
     PhotoListComponent,
     SearchComponent
   ],
-  imports: [CommonModule, PhotoModule, CardModule, DarkOnHoverModule]
+  imports: [
+    CommonModule,
+    PhotoModule,
+    CardModule,
+    DarkOnHoverModule,
+    RouterModule
+  ]
 })
 export class PhotoListModule {}
