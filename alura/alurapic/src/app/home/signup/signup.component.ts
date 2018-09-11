@@ -1,12 +1,13 @@
-import { PlatformDetectorService } from './../../core/platform-detector/platform-detector.service';
-import { SignupService } from './signup.service';
-import { NewUser } from './new-user';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { lowerCaseValidator } from '../../shared/validators/lower-case.validator';
 import { UserNotTakenValidatorService } from './user-not-taken.validator.service';
-import { Router } from '@angular/router';
+import { usernamePassword } from './username-password.validator';
+import { SignupService } from './signup.service';
+import { PlatformDetectorService } from './../../core/platform-detector/platform-detector.service';
+import { NewUser } from './new-user';
 
 @Component({
   selector: 'ap-signup',
@@ -47,7 +48,7 @@ export class SignupComponent implements OnInit {
         '',
         [Validators.required, Validators.minLength(8), Validators.maxLength(14)]
       ]
-    });
+    }, { validator: usernamePassword });
 
     if (this.platformDetectorService.isPlatformBrowser()) {
       this.emailInput.nativeElement.focus();
@@ -55,6 +56,10 @@ export class SignupComponent implements OnInit {
   }
 
   signup() {
+    if (this.signupForm.invalid || this.signupForm.pending) {
+      return;
+    }
+
     const newUser = this.signupForm.getRawValue() as NewUser;
     this.signupService
       .signup(newUser)
